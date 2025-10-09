@@ -1,0 +1,107 @@
+import{_ as s,c as a,a as e,o as i}from"./app-BNuIUq7T.js";const l={};function t(p,n){return i(),a("div",null,n[0]||(n[0]=[e(`<h1 id="深度学习-ccpd车牌数据集介绍" tabindex="-1"><a class="header-anchor" href="#深度学习-ccpd车牌数据集介绍"><span>[深度学习] CCPD车牌数据集介绍</span></a></h1><p>CCPD是一个大型的、多样化的、经过仔细标注的中国城市车牌开源数据集。CCPD数据集主要分为CCPD2019数据集和CCPD2020(CCPD-Green)数据集。CCPD2019数据集车牌类型仅有普通车牌(蓝色车牌)，CCPD2020数据集车牌类型仅有新能源车牌(绿色车牌)。 <strong>在CCPD数据集中，每张图片仅包含一张车牌，车牌的车牌省份主要为皖。CCPD中的每幅图像都包含大量的标注信息，但是CCPD数据集没有专门的标注文件，每张图像的文件名就是该图像对应的数据标注</strong>。标注最困难的部分是注释四个顶点的位置。为了完成这项任务，数据发布者首先在10k图像上手动标记四个顶点的位置。然后设计了一个基于深度学习的检测模型，在对该网络进行良好训练后，对每幅图像的四个顶点位置进行自动标注。最后，数据发布者雇佣了7名兼职工人在两周内纠正这些标注。CCPD提供了超过250k个独特的车牌图像和详细的注释。每张图像的分辨率为720(宽度)× 1160(高)× 3(通道)。实际上，这种分辨率足以保证每张图像中的车牌清晰可辨,但是该数据有些图片标注可能不准。不过总的来说CCPD数据集非常推荐研究车牌识别算法的人员学习使用。</p><p>CCPD官方开源仓库地址为<a href="https://github.com/detectRecog/CCPD" target="_blank" rel="noopener noreferrer">CCPD</a>，该仓库介绍了CCPD2019和CCPD2020的相关信息和下载地址。关于CCPD数据集更详细的介绍见其ECCV2018发表论文，地址为<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Zhenbo_Xu_Towards_End-to-End_License_ECCV_2018_paper.pdf" target="_blank" rel="noopener noreferrer">Towards End-to-End License Plate Detection and Recognition: A Large Dataset</a>。</p><h2 id="ccpd数据集介绍" tabindex="-1"><a class="header-anchor" href="#ccpd数据集介绍"><span>CCPD数据集介绍</span></a></h2><h3 id="ccpd2019数据集" tabindex="-1"><a class="header-anchor" href="#ccpd2019数据集"><span>CCPD2019数据集</span></a></h3><p>CCPD2019数据集主要采集于合肥市停车场，采集时间为上午7:30到晚上10:00，停车场采集人员手持Android POS机对停车场的车辆拍照进行数据采集。所拍摄的车牌照片涉及多种复杂环境，包括模糊、倾斜、雨天、雪天等。CCPD2019数据集包含了25万多幅中国城市车牌图像和车牌检测与识别信息的标注。主要介绍如下：</p><table><thead><tr><th style="text-align:center;">类别</th><th style="text-align:center;">描述</th><th style="text-align:center;">图片数</th></tr></thead><tbody><tr><td style="text-align:center;">CCPD-Base</td><td style="text-align:center;">通用车牌图片</td><td style="text-align:center;">200k</td></tr><tr><td style="text-align:center;">CCPD-FN</td><td style="text-align:center;">车牌离摄像头拍摄位置相对较近或较远</td><td style="text-align:center;">20k</td></tr><tr><td style="text-align:center;">CCPD-DB</td><td style="text-align:center;">车牌区域亮度较亮、较暗或者不均匀</td><td style="text-align:center;">20k</td></tr><tr><td style="text-align:center;">CCPD-Rotate</td><td style="text-align:center;">车牌水平倾斜20到50度，竖直倾斜-10到10度</td><td style="text-align:center;">10k</td></tr><tr><td style="text-align:center;">CCPD-Tilt</td><td style="text-align:center;">车牌水平倾斜15到45度，竖直倾斜15到45度</td><td style="text-align:center;">10k</td></tr><tr><td style="text-align:center;">CCPD-Weather</td><td style="text-align:center;">车牌在雨雪雾天气拍摄得到</td><td style="text-align:center;">10k</td></tr><tr><td style="text-align:center;">CCPD-Challenge</td><td style="text-align:center;">在车牌检测识别任务中较有挑战性的图片</td><td style="text-align:center;">10k</td></tr><tr><td style="text-align:center;">CCPD-Blur</td><td style="text-align:center;">由于摄像机镜头抖动导致的模糊车牌图片</td><td style="text-align:center;">5k</td></tr><tr><td style="text-align:center;">CCPD-NP</td><td style="text-align:center;">没有安装车牌的新车图片</td><td style="text-align:center;">5k</td></tr></tbody></table><p>CCPD2019/CCPD-Base中的图像被拆分为train/val数据集。使用CCPD2019中的子数据集(CCPD-DB、CCPD-Blur、CCPD-FN、CCPD-Rotate、CCPD-Tilt、CCPD-Challenge)进行测试。CCPD2019数据集(数据大小12.26G)下载地址：</p><ul><li><a href="https://drive.google.com/open?id=1rdEsCUcIUaYOVRkx5IMTRNA7PcGMmSgc" target="_blank" rel="noopener noreferrer">谷歌云盘</a></li><li><a href="https://pan.baidu.com/share/init?surl=i5AOjAbtkwb17Zy-NQGqkw" target="_blank" rel="noopener noreferrer">百度云盘(代码：hm0u)</a></li></ul><p>CCPD2019中部分图片如下图所示： <img src="https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/[深度学习] CCPD车牌数据集介绍/image/ccpd2019.png" alt="" loading="lazy"></p><h3 id="ccpd2020数据集" tabindex="-1"><a class="header-anchor" href="#ccpd2020数据集"><span>CCPD2020数据集</span></a></h3><p>CCPD2020数据集采集方法应该和CCPD2019数据集类似。CCPD2020仅仅有新能源车牌图片，包含不同亮度，不同倾斜角度，不同天气环境下的车牌。CCPD2020中的图像被拆分为train/val/test数据集，train/val/test数据集中图片数分别为5769/1001/5006。CCPD2020数据集(数据大小865.7MB)下载地址：</p><ul><li><a href="https://drive.google.com/file/d/1m8w1kFxnCEiqz_-t2vTcgrgqNIv986PR/view?usp=sharing" target="_blank" rel="noopener noreferrer">谷歌云盘</a></li><li><a href="https://pan.baidu.com/s/1JSpc9BZXFlPkXxRK4qUCyw" target="_blank" rel="noopener noreferrer">百度云盘(代码：ol3j)</a></li></ul><p>CCPD2020中部分图片如下图所示： <img src="https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/[深度学习] CCPD车牌数据集介绍/image/ccpd2020.png" alt="" loading="lazy"></p><h2 id="ccpd数据集标注处理" tabindex="-1"><a class="header-anchor" href="#ccpd数据集标注处理"><span>CCPD数据集标注处理</span></a></h2><p>CCPD数据集没有专门的标注文件，每张图像的文件名就是该图像对应的数据标注。例如图片3061158854166666665-97_100-159&amp;434_586&amp;578-558&amp;578_173&amp;523_159&amp;434_586&amp;474-0_0_3_24_33_32_28_30-64-233.jpg的文件名可以由分割符&#39;-&#39;分为多个部分：</p><ol><li>3061158854166666665为区域（这个值可能有问题，可以不管）；</li><li>97_100对应车牌的两个倾斜角度-水平倾斜角和垂直倾斜角, 水平倾斜97度, 竖直倾斜100度。水平倾斜度是车牌与水平线之间的夹角。二维旋转后，垂直倾斜角为车牌左边界线与水平线的夹角。CCPD数据集中这个参数标注可能不那么准，这个指标具体参考了论文<a href="http://www.ccsenet.org/journal/index.php/cis/article/download/1843/1751" target="_blank" rel="noopener noreferrer">Hough Transform and Its Application in Vehicle License Plate Tilt Correction</a>；</li><li>159&amp;434_586&amp;578对应边界框左上角和右下角坐标:左上(159, 434), 右下(586, 578)；</li><li>558&amp;578_173&amp;523_159&amp;434_586&amp;474对应车牌四个顶点坐标(右下角开始顺时针排列)：右下(558, 578)，左下(173, 523)，左上(159, 434)，右上(586, 474)；</li><li>0_0_3_24_33_32_28_30为车牌号码（第一位为省份缩写），在CCPD2019中这个参数为7位，CCPD2020中为8位，有对应的关系表；</li><li>64为亮度，数值越大车牌越亮（可能不准确，仅供参考）；</li><li>233为模糊度，数值越小车牌越模糊（可能不准确，仅供参考）。</li></ol><p>对于每张图片的标注信息直接字符分割即可。一个展示CCPD数据集单张图片标注的Python代码如下。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>## -*- coding: utf-8 -*-</span></span>
+<span class="line"><span>&quot;&quot;&quot;</span></span>
+<span class="line"><span>Created on Wed Jun  9 18:24:10 2021</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@author: luohenyueji</span></span>
+<span class="line"><span>&quot;&quot;&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>from PIL import Image, ImageDraw, ImageFont</span></span>
+<span class="line"><span>import os</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>provincelist = [</span></span>
+<span class="line"><span>    &quot;皖&quot;, &quot;沪&quot;, &quot;津&quot;, &quot;渝&quot;, &quot;冀&quot;,</span></span>
+<span class="line"><span>    &quot;晋&quot;, &quot;蒙&quot;, &quot;辽&quot;, &quot;吉&quot;, &quot;黑&quot;,</span></span>
+<span class="line"><span>    &quot;苏&quot;, &quot;浙&quot;, &quot;京&quot;, &quot;闽&quot;, &quot;赣&quot;,</span></span>
+<span class="line"><span>    &quot;鲁&quot;, &quot;豫&quot;, &quot;鄂&quot;, &quot;湘&quot;, &quot;粤&quot;,</span></span>
+<span class="line"><span>    &quot;桂&quot;, &quot;琼&quot;, &quot;川&quot;, &quot;贵&quot;, &quot;云&quot;,</span></span>
+<span class="line"><span>    &quot;西&quot;, &quot;陕&quot;, &quot;甘&quot;, &quot;青&quot;, &quot;宁&quot;,</span></span>
+<span class="line"><span>    &quot;新&quot;]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>wordlist = [</span></span>
+<span class="line"><span>    &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;,</span></span>
+<span class="line"><span>    &quot;F&quot;, &quot;G&quot;, &quot;H&quot;, &quot;J&quot;, &quot;K&quot;,</span></span>
+<span class="line"><span>    &quot;L&quot;, &quot;M&quot;, &quot;N&quot;, &quot;P&quot;, &quot;Q&quot;,</span></span>
+<span class="line"><span>    &quot;R&quot;, &quot;S&quot;, &quot;T&quot;, &quot;U&quot;, &quot;V&quot;,</span></span>
+<span class="line"><span>    &quot;W&quot;, &quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;, &quot;0&quot;,</span></span>
+<span class="line"><span>    &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;,</span></span>
+<span class="line"><span>    &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## --- 绘制边界框</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def DrawBox(im, box):</span></span>
+<span class="line"><span>    draw = ImageDraw.Draw(im)</span></span>
+<span class="line"><span>    draw.rectangle([tuple(box[0]), tuple(box[1])],  outline=&quot;#FFFFFF&quot;, width=3)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## --- 绘制四个关键点</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def DrawPoint(im, points):</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    draw = ImageDraw.Draw(im)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    for p in points:</span></span>
+<span class="line"><span>        center = (p[0], p[1])</span></span>
+<span class="line"><span>        radius = 5</span></span>
+<span class="line"><span>        right = (center[0]+radius, center[1]+radius)</span></span>
+<span class="line"><span>        left = (center[0]-radius, center[1]-radius)</span></span>
+<span class="line"><span>        draw.ellipse((left, right), fill=&quot;#FF0000&quot;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## --- 绘制车牌</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def DrawLabel(im, label):</span></span>
+<span class="line"><span>    draw = ImageDraw.Draw(im)</span></span>
+<span class="line"><span>   ## draw.multiline_text((30,30), label.encode(&quot;utf-8&quot;), fill=&quot;#FFFFFF&quot;)</span></span>
+<span class="line"><span>    font = ImageFont.truetype(&#39;simsun.ttc&#39;, 64)</span></span>
+<span class="line"><span>    draw.text((30, 30), label, font=font)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## --- 图片可视化</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def ImgShow(imgpath, box, points, label):</span></span>
+<span class="line"><span>    ## 打开图片</span></span>
+<span class="line"><span>    im = Image.open(imgpath)</span></span>
+<span class="line"><span>    DrawBox(im, box)</span></span>
+<span class="line"><span>    DrawPoint(im, points)</span></span>
+<span class="line"><span>    DrawLabel(im, label)</span></span>
+<span class="line"><span>    ## 显示图片</span></span>
+<span class="line"><span>    im.show()</span></span>
+<span class="line"><span>    im.save(&#39;result.jpg&#39;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def main():</span></span>
+<span class="line"><span>    ## 图像路径</span></span>
+<span class="line"><span>    imgpath = &#39;ccpd_green/val/0136360677083-95_103-255&amp;434_432&amp;512-432&amp;512_267&amp;494_255&amp;434_424&amp;449-0_0_3_25_30_24_24_32-98-218.jpg&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## 图像名</span></span>
+<span class="line"><span>    imgname = os.path.basename(imgpath).split(&#39;.&#39;)[0]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## 根据图像名分割标注</span></span>
+<span class="line"><span>    _, _, box, points, label, brightness, blurriness = imgname.split(&#39;-&#39;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## --- 边界框信息</span></span>
+<span class="line"><span>    box = box.split(&#39;_&#39;)</span></span>
+<span class="line"><span>    box = [list(map(int, i.split(&#39;&amp;&#39;))) for i in box]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## --- 关键点信息</span></span>
+<span class="line"><span>    points = points.split(&#39;_&#39;)</span></span>
+<span class="line"><span>    points = [list(map(int, i.split(&#39;&amp;&#39;))) for i in points]</span></span>
+<span class="line"><span>    ## 将关键点的顺序变为从左上顺时针开始</span></span>
+<span class="line"><span>    points = points[-2:]+points[:2]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## --- 读取车牌号</span></span>
+<span class="line"><span>    label = label.split(&#39;_&#39;)</span></span>
+<span class="line"><span>    ## 省份缩写</span></span>
+<span class="line"><span>    province = provincelist[int(label[0])]</span></span>
+<span class="line"><span>    ## 车牌信息</span></span>
+<span class="line"><span>    words = [wordlist[int(i)] for i in label[1:]]</span></span>
+<span class="line"><span>    ## 车牌号</span></span>
+<span class="line"><span>    label = province+&#39;&#39;.join(words)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ## --- 图片可视化</span></span>
+<span class="line"><span>    ImgShow(imgpath, box, points, label)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>main()</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的代码读取了CCPD中的一张图片，并绘制了其车牌的边界框，关键点，车牌名。结果如下所示</p><table><thead><tr><th style="text-align:center;">类型</th><th style="text-align:center;">图片</th></tr></thead><tbody><tr><td style="text-align:center;">原图</td><td style="text-align:center;"><img src="https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/[深度学习] CCPD车牌数据集介绍/image/src.jpg" alt="" loading="lazy"></td></tr><tr><td style="text-align:center;">标注展示图</td><td style="text-align:center;"><img src="https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/[深度学习] CCPD车牌数据集介绍/image/result.jpg" alt="" loading="lazy"></td></tr></tbody></table>`,21)]))}const c=s(l,[["render",t],["__file","2021-06-09-_深度学习_ CCPD车牌数据集介绍.html.vue"]]),d=JSON.parse('{"path":"/blog/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2021-06-09-_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0_%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html","title":"[深度学习] CCPD车牌数据集介绍","lang":"zh-CN","frontmatter":{"date":"2021-06-09T19:03:20.000Z","category":["深度学习"],"tag":["深度学习","图像处理","机器学习"],"description":"[深度学习] CCPD车牌数据集介绍 CCPD是一个大型的、多样化的、经过仔细标注的中国城市车牌开源数据集。CCPD数据集主要分为CCPD2019数据集和CCPD2020(CCPD-Green)数据集。CCPD2019数据集车牌类型仅有普通车牌(蓝色车牌)，CCPD2020数据集车牌类型仅有新能源车牌(绿色车牌)。 在CCPD数据集中，每张图片仅包含一...","head":[["meta",{"property":"og:url","content":"https://luohenyueji.github.io/blog/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2021-06-09-_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0_%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html"}],["meta",{"property":"og:site_name","content":"落痕月极的博客"}],["meta",{"property":"og:title","content":"[深度学习] CCPD车牌数据集介绍"}],["meta",{"property":"og:description","content":"[深度学习] CCPD车牌数据集介绍 CCPD是一个大型的、多样化的、经过仔细标注的中国城市车牌开源数据集。CCPD数据集主要分为CCPD2019数据集和CCPD2020(CCPD-Green)数据集。CCPD2019数据集车牌类型仅有普通车牌(蓝色车牌)，CCPD2020数据集车牌类型仅有新能源车牌(绿色车牌)。 在CCPD数据集中，每张图片仅包含一..."}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:image","content":"https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/%5B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%5D%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D/image/ccpd2019.png"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"article:tag","content":"深度学习"}],["meta",{"property":"article:tag","content":"图像处理"}],["meta",{"property":"article:tag","content":"机器学习"}],["meta",{"property":"article:published_time","content":"2021-06-09T19:03:20.000Z"}],["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"[深度学习] CCPD车牌数据集介绍\\",\\"image\\":[\\"https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/%5B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%5D%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D/image/ccpd2019.png\\",\\"https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/%5B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%5D%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D/image/ccpd2020.png\\",\\"https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/%5B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%5D%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D/image/src.jpg\\",\\"https://gitlab.com/luohenyueji/article_picture_warehouse/-/raw/main/CSDN/%5B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%5D%20CCPD%E8%BD%A6%E7%89%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D/image/result.jpg\\"],\\"datePublished\\":\\"2021-06-09T19:03:20.000Z\\",\\"dateModified\\":null,\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"落痕月极\\",\\"url\\":\\"/\\"}]}"]]},"headers":[{"level":2,"title":"CCPD数据集介绍","slug":"ccpd数据集介绍","link":"#ccpd数据集介绍","children":[{"level":3,"title":"CCPD2019数据集","slug":"ccpd2019数据集","link":"#ccpd2019数据集","children":[]},{"level":3,"title":"CCPD2020数据集","slug":"ccpd2020数据集","link":"#ccpd2020数据集","children":[]}]},{"level":2,"title":"CCPD数据集标注处理","slug":"ccpd数据集标注处理","link":"#ccpd数据集标注处理","children":[]}],"git":{},"readingTime":{"minutes":6.59,"words":1978},"filePathRelative":"blog/深度学习/深度学习笔记/2021-06-09-[深度学习] CCPD车牌数据集介绍.md","localizedDate":"2021年6月10日","excerpt":"\\n<p>CCPD是一个大型的、多样化的、经过仔细标注的中国城市车牌开源数据集。CCPD数据集主要分为CCPD2019数据集和CCPD2020(CCPD-Green)数据集。CCPD2019数据集车牌类型仅有普通车牌(蓝色车牌)，CCPD2020数据集车牌类型仅有新能源车牌(绿色车牌)。\\n<strong>在CCPD数据集中，每张图片仅包含一张车牌，车牌的车牌省份主要为皖。CCPD中的每幅图像都包含大量的标注信息，但是CCPD数据集没有专门的标注文件，每张图像的文件名就是该图像对应的数据标注</strong>。标注最困难的部分是注释四个顶点的位置。为了完成这项任务，数据发布者首先在10k图像上手动标记四个顶点的位置。然后设计了一个基于深度学习的检测模型，在对该网络进行良好训练后，对每幅图像的四个顶点位置进行自动标注。最后，数据发布者雇佣了7名兼职工人在两周内纠正这些标注。CCPD提供了超过250k个独特的车牌图像和详细的注释。每张图像的分辨率为720(宽度)× 1160(高)× 3(通道)。实际上，这种分辨率足以保证每张图像中的车牌清晰可辨,但是该数据有些图片标注可能不准。不过总的来说CCPD数据集非常推荐研究车牌识别算法的人员学习使用。</p>","autoDesc":true}');export{c as comp,d as data};
