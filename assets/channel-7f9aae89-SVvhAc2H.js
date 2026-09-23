@@ -1,0 +1,1 @@
+import{It as e,x as t}from"./mermaid.esm.min-BIApBd3F.js";var n=(n,r)=>t.lang.round(e.parse(n)[r]);export{n as t};

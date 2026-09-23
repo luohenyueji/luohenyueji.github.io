@@ -1,0 +1,1 @@
+import{l as e}from"./graph-a5cd6100-D9XW_c0Z.js";var t=4;function n(n){return e(n,t)}export{n as t};
